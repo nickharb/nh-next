@@ -1,6 +1,8 @@
 import { defineType, defineField } from 'sanity';
 import { BiUser } from 'react-icons/bi';
 
+// Note: using icons from React Icons: https://react-icons.github.io/react-icons/icons?name=bi
+
 export default defineType({
   name: 'profile',
   title: 'Profile',
