@@ -10,8 +10,8 @@ import {deskTool} from 'sanity/desk'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
 
-export default defineConfig({
-  basePath: '/studio',
+const config = defineConfig({
+  basePath: '/admin',
   projectId,
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
@@ -23,3 +23,5 @@ export default defineConfig({
     visionTool({defaultApiVersion: apiVersion}),
   ],
 })
+
+export default config;
