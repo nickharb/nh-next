@@ -6,8 +6,8 @@ import { getProjects } from '@/sanity/sanity-utils'
 // https://github.com/nickharb/nh-next
 
 // Reference:
-// freeCodeCamp tutorial: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/
 // YouTube: Personal Website with Next.js 13, Sanity.io, TailwindCSS, and TypeScript: https://www.youtube.com/watch?v=OcTPaUfay5I
+// freeCodeCamp tutorial: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/
 // Official Sanity toolkit: https://www.sanity.io/plugins/next-sanity
 // Next/Sanity tutorial: https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js
 
@@ -16,14 +16,13 @@ export default async function Home() {
   // Getting the projects here happens on the server side for SEO
   const projects = await getProjects()
   return (
-    <main className="p-24">
-      <h1 className="text-white text-3xl font-bold uppercase">Nick Harbaugh</h1>
+    <div>
       <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {projects.map((project) => (
           <Link
             href={`/works/${project.slug}`}
             key={project._id}
-            className='border border-blue-600 rounded-md p-3'
+            className='border border-emerald-600 rounded-md p-3'
           >
             {project.image && (
               <Image
@@ -40,6 +39,6 @@ export default async function Home() {
           </Link>
         ))}
       </div>
-    </main>
+    </div>
   )
 }
