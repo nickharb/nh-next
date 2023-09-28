@@ -1,4 +1,4 @@
-import { getProject } from '@/sanity/lib/utils'
+import { getProject } from '@/sanity/sanity-utils'
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image'
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { getProjects } from '@/sanity/lib/utils'
+import { getProjects } from '@/sanity/sanity-utils'
 
 // Github:
 // https://github.com/nickharb/nh-next
