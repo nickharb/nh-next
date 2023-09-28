@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className="text-white">Hello World!</h1>
-      {projects.map((project: any) => (
+      {projects.map((project) => (
         <div key={project._id}>{project.name}</div>
       ))}
     </main>

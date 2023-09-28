@@ -1,9 +1,13 @@
 import { createClient, groq } from 'next-sanity'
 import { apiVersion, dataset, projectId } from '@/sanity/env'
+import { Project } from '@/types/Project'
 
 // Utility function to get projects from sanity database
 // createClient allows us to read data from the admin
-export async function getProjects() {
+// Define the promise type returning an array of projects
+// Adding types to the sanity utils keeps all the typing in one place
+// All pages and components that use these utils inherit the types
+export async function getProjects(): Promise<Project[]> {
   const client = createClient({
     projectId,
     dataset,
