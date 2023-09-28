@@ -17,7 +17,7 @@ export default async function Home() {
   const projects = await getProjects()
   return (
     <main className="p-24">
-      <h1 className="text-white text-3xl font-extrabold">Hello World!</h1>
+      <h1 className="text-white text-3xl font-bold uppercase">Nick Harbaugh</h1>
       <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {projects.map((project) => (
           <Link
