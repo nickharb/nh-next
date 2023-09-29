@@ -1,14 +1,25 @@
-import { defineType } from 'sanity'
+import {defineField, defineType} from 'sanity'
+import {YouTubePreview} from '../components/youtube-preview'
 
-export default defineType({
+const youtube = defineType({
   name: 'youtube',
-  title: 'YouTube Embed',
+  title: 'Youtube embed',
   type: 'object',
   fields: [
-    {
+    defineField({
       name: 'url',
       title: 'URL',
-      type: 'url'
-    }
-  ]
+      type: 'url',
+    }),
+  ],
+  preview: {
+    select: {
+      url: 'url',
+    },
+  },
+  components: {
+    preview: YouTubePreview,
+  },
 })
+
+export default youtube

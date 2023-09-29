@@ -35,7 +35,7 @@ export default defineType({
       ],
       lists: [
         { title: 'Bullet', value: 'bullet' },
-        { title: 'Numbered', value: 'numbered' }
+        { title: 'Numbered', value: 'number' }
       ],
       // Marks let you mark up inline text in the Portable Text Editor
       marks: {

@@ -9,15 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@portabletext/react": "^3.0.7",
+    "@portabletext/react": "^3.0.9",
     "@sanity/client": "^6.4.12",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/ui": "^1.8.2",
     "@sanity/vision": "^3.16.7",
     "dotenv": "^16.3.1",
     "next": "latest",
     "next-sanity": "^5.5.4",
     "react": "latest",
     "react-dom": "latest",
+    "react-player": "^2.13.0",
     "sanity": "^3.16.7",
     "styled-components": "5.2"
   },
