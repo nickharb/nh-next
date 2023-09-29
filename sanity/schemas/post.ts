@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Posts',
   type: 'document',
   fields: [
     defineField({
@@ -20,13 +20,7 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
+      name: 'image',
       title: 'Main image',
       type: 'image',
       options: {
@@ -35,8 +29,8 @@ export default defineType({
       fields: [
         {
           name: 'alt',
+          title: 'Alt text',
           type: 'string',
-          title: 'Alternative Text',
         }
       ]
     }),
@@ -52,8 +46,8 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
+      name: 'content',
+      title: 'Content',
       type: 'blockContent',
     }),
   ],

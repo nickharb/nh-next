@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         'lcd-blue': '#2F39FF',
         'crt-green': '#12ED42',
+        'crt-green-2': '#6BF575',
         'crt-red': '#FB3F37'
       }
     },

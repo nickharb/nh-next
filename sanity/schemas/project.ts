@@ -1,44 +1,54 @@
-const project = {
+import { defineField, defineType } from 'sanity'
+
+export default defineType({
   name: 'project',
   title: 'Projects',
   type: 'document',
   fields: [
-    {
-      name: 'name',
-      title: 'Name',
-      type: 'string'
-    },
-    {
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'name' } // defines the field from name
-    },
-    {
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Main image',
       type: 'image',
-      options: { hotspot: true }, // autofocus on a point in the image
+      options: {
+        hotspot: true,
+      },
       fields: [
         {
           name: 'alt',
-          title: 'Alt',
-          type: 'string'
+          title: 'Alt text',
+          type: 'string',
         }
       ]
-    },
-    {
+    }),
+    defineField({
       name: 'url',
-      title: 'URL',
+      title: 'Project URL',
       type: 'url'
-    },
-    {
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'category' } }],
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }] // adds a wysiwyg editor
-    }
+      type: 'blockContent',
+    })
   ]
-}
-
-export default project
+})
