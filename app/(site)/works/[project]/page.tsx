@@ -28,7 +28,7 @@ export default async function Project({ params }: Props) {
   return (
     <div>
       <header className='flex items-center justify-between'>
-        <h1 className='text-white text-5xl font-extrabold'>{project.name}</h1>
+        <h1 className='text-white text-5xl font-extrabold'>{project.title}</h1>
         {project.url && (
           <a href={project.url} title='View Project' target='_blank' rel='noopener noreferrer' className='bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition'>
             View Project
