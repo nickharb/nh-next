@@ -1,7 +1,8 @@
 import { createClient, groq } from 'next-sanity'
 import { apiVersion, dataset, projectId } from '@/sanity/env'
 import { Project } from '@/types/Project'
-import { Homepage } from '@/types/Homepage'
+import { Home } from '@/types/Home'
+import { About } from '@/types/About'
 
 // Utility function to get projects from sanity database
 // createClient allows us to read data from the admin
@@ -53,7 +54,7 @@ export async function getProject(slug: string): Promise<Project> {
 }
 
 // Function for getting the homepage content
-export async function getHomepage(slug: string): Promise<Homepage> {
+export async function getHomeContent(slug: string): Promise<Home> {
   const client = createClient({
     projectId,
     dataset,
@@ -62,11 +63,10 @@ export async function getHomepage(slug: string): Promise<Homepage> {
 
   // Use groq to query the database
   return client.fetch(
-    groq`*[_type == "homepage" && slug.current == "home"][0] {
+    groq`*[_type == "home" && _id == "home"][0] {
       title,
       intro,
       'image': image.asset->url
-    }`,
-    { slug: slug } // can be shortened to just { slug }
+    }`
   )
 }

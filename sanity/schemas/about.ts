@@ -1,9 +1,9 @@
 import { defineType, defineField } from 'sanity'
 
 export default defineType({
-  name: 'homepage',
+  name: 'about',
   type: 'document',
-  title: 'Homepage',
+  title: 'About',
   fields: [
     defineField({
       name: 'title',
@@ -21,7 +21,7 @@ export default defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Homepage intro image',
+      title: 'Headshot',
       type: 'image',
       options: {
         hotspot: true,
@@ -35,8 +35,8 @@ export default defineType({
       ]
     }),
     defineField({
-      name: 'intro',
-      title: 'Intro',
+      name: 'bio',
+      title: 'Bio',
       type: 'text',
     }),
   ],
