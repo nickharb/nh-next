@@ -19,6 +19,7 @@ export default async function Home() {
         <a href='https://www.sevenmilemedia.com/work/' target='_blank' rel='noreferrer' className='underline'>Portfolio</a>
         <a href='https://www.instagram.com/nickharb/' target='_blank' rel='noreferrer' className='underline'>Instagram</a>
         <a href='https://www.linkedin.com/in/nickharb/' target='_blank' rel='noreferrer' className='underline'>LinkedIn</a>
+        <a href='https://medium.com/@nickharb' target='_blank' rel='noreferrer' className='underline'>Medium</a>
       </div>
     </div>
   )
