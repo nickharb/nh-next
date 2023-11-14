@@ -12,45 +12,13 @@ import { getHomeContent, getProjects } from '@/sanity/sanity-utils'
 // Next/Sanity tutorial: https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js
 
 export default async function Home() {
-  // In next 13, components are server-side-rendered by default
-  // Getting the projects here happens on the server side for SEO
-  const projects = await getProjects()
-  const homeContent = await getHomeContent('home')
   return (
-    <div>
-      <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        <div className='intro-section'>
-          <p>{homeContent.intro}</p>
-          {homeContent.image && (
-            <Image
-              src={homeContent.image}
-              alt={homeContent.title}
-              width={250}
-              height={100}
-              className='object-cover rounded-md'
-            />
-          )}
-        </div>
-        {projects.map((project) => (
-          <Link
-            href={`/works/${project.slug}`}
-            key={project._id}
-            className='border border-emerald-600 rounded-md p-3'
-          >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={250}
-                height={100}
-                className='object-cover rounded-md'
-              />
-            )}
-            <h2 className='text-normal italic'>
-              {project.title}
-            </h2>
-          </Link>
-        ))}
+    <div className='mt-5 md:mt-10 lg:mt-20'>
+      <h1 className='text-xl leading-normal md:text-2xl lg:text-4xl lg:leading-normal'>Nick Harbaugh is an artist and computer programmer working with data and artificial intelligence to explore what it means to be human in a technological world.</h1>
+      <div className='flex gap-5 mt-5 md:mt-10 lg:mt-20'>
+        <a href='https://www.sevenmilemedia.com/work/' target='_blank' rel='noreferrer' className='underline'>Portfolio</a>
+        <a href='https://www.instagram.com/nickharb/' target='_blank' rel='noreferrer' className='underline'>Instagram</a>
+        <a href='https://www.linkedin.com/in/nickharb/' target='_blank' rel='noreferrer' className='underline'>LinkedIn</a>
       </div>
     </div>
   )
