@@ -14,7 +14,7 @@ import { getHomeContent, getProjects } from '@/sanity/sanity-utils'
 export default async function Home() {
   return (
     <div className='mt-5 md:mt-10 lg:mt-20'>
-      <h1 className='text-xl leading-normal md:text-2xl lg:text-4xl lg:leading-normal'>Nick Harbaugh is an artist and computer programmer working with data and artificial intelligence to explore what it means to be human in a technological world.</h1>
+      <h1 className='text-xl leading-normal md:text-2xl lg:text-4xl lg:leading-normal'>Nick Harbaugh is an artist and computer programmer working with data and artificial intelligence to explore what it means to be human in a technological world. He is currently looking for new opportunities with forward-thinking organizations.</h1>
       <div className='mt-10 md:flex md:gap-5 lg:mt-20'>
         <a href='https://www.sevenmilemedia.com/work/' target='_blank' rel='noreferrer' className='block py-1 underline'>Portfolio</a>
         <a href='https://www.instagram.com/nickharb/' target='_blank' rel='noreferrer' className='block py-1 underline'>Instagram</a>
